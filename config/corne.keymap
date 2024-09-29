@@ -303,10 +303,10 @@
             //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 
             bindings = <
-&none  &kp TAB    &kp Q  &kp W   &hm X E  &hm N4 R     &kp N4   &kp N3  &kp N4  &kp N1  &kp N2    &none
-&none  &kp LSHFT  &kp A  &kp S   &kp D    &hm G F      &kp G    &kp H   &kp X   &none   &none     &none
-&none  &kp LCTRL  &kp Z  &kp F1  &kp C    &hm B V      &kp B    &kp N   &kp M   &none   &to BASE  &none
-                         &kp G   &kp N4   &kp SPACE    &kp RET  &none   &kp T
+&none  &kp TAB    &kp Q  &kp W   &hm X E    &hm N4 R     &kp N4   &kp N3  &kp N2  &kp N1  &none     &none
+&none  &kp LSHFT  &kp A  &kp S   &kp D      &hm G F      &kp G    &kp H   &kp X   &none   &none     &none
+&none  &kp LCTRL  &kp Z  &kp F1  &kp C      &hm B V      &kp B    &kp N   &kp M   &none   &to BASE  &none
+                         &kp H   &kp SPACE  &kp SPACE    &kp RET  &none   &kp T
             >;
         };
 
