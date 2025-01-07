@@ -211,7 +211,7 @@
                      , <&macro_wait_time 2000 &kp LC(LS(T))>
                      , <&macro_wait_time 2000 &kp LC(LS(T))>
                      , <&macro_wait_time 2000 &kp LC(LS(T))>;
-            label = "GIT_COMMIT";
+            label = "START_DEALSUITE";
         };
     };
 
