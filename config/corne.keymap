@@ -204,14 +204,44 @@
         start_dealsuite: start_dealsuite {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(R) &kp C &kp E &kp L &kp E &kp R &macro_wait_time 1500 &kp RET &kp N1 &kp RET>
-                     , <&macro_wait_time 1500 &kp LC(R) &macro_wait_time 50 &kp R &kp U &kp N &kp SPACE &kp D &macro_wait_time 500 &kp RET>
-                     , <&kp LC(LS(N5))>
-                     , <&macro_wait_time 1500 &kp LC(R) &macro_wait_time 50 &kp A &kp P &kp P &kp DOT &kp P &macro_wait_time 500 &kp RET>
-                     , <&kp LC(LS(N5))>
-                     , <&macro_wait_time 1500 &kp LC(R) &macro_wait_time 50 &kp R &kp U &kp N &kp S &kp E &kp R &kp V &macro_wait_time 1500 &kp RET>;
+            bindings = <
+                &kp LC(R)          // Press CTRL + R
+                &kp C &kp E &kp L &kp E &kp R  // Type 'celer'
+                &macro_wait_time 1000
+                &kp RET            // Press Enter
+                &kp N1             // Type '1'
+                &kp RET            // Press Enter
+
+                // New Terminal tab
+                &kp LC(LS(N5))
+                &macro_wait_time 1500
+                &kp LC(R)          // Press CTRL + R
+                &macro_wait_time 50
+                &kp R &kp U &kp N &kp SPACE &kp D  // Type 'run d'
+                &macro_wait_time 500
+                &kp RET            // Press Enter
+
+                // New Terminal tab
+                &kp LC(LS(N5))
+                &macro_wait_time 1500
+                &kp LC(R)          // Press CTRL + R
+                &macro_wait_time 50
+                &kp A &kp P &kp P &kp DOT &kp P  // Type 'app.p'
+                &macro_wait_time 500
+                &kp RET            // Press Enter
+
+                // New Terminal tab
+                &kp LC(LS(N5))
+                &macro_wait_time 1500
+                &kp LC(R)          // Press CTRL + R
+                &macro_wait_time 50
+                &kp R &kp U &kp N &kp S &kp E &kp R &kp V // Type 'runserv'
+                &macro_wait_time 1500
+                &kp RET            // Press Enter
+            >;
             label = "START_DEALSUITE";
         };
+
     };
 
     keymap {
