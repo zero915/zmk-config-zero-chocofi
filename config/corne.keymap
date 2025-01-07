@@ -207,7 +207,7 @@
             bindings = <
                 &kp LC(R)          // Press CTRL + R
                 &kp C &kp E &kp L &kp E  // Type 'cele'
-                &macro_wait_time 1000
+                &macro_wait_time 1500
                 &kp RET            // Press Enter
                 &kp N1             // Type '1'
                 &kp RET            // Press Enter
@@ -215,6 +215,7 @@
                 // New Terminal tab
                 &macro_wait_time 2500
                 &kp LC(LS(N5))
+                &macro_wait_time 2500
                 &kp LC(R)          // Press CTRL + R
                 &macro_wait_time 50
                 &kp R &kp U &kp N &kp SPACE &kp D  // Type 'run d'
