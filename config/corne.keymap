@@ -200,6 +200,19 @@
             bindings = <&kp G &kp I &kp T &kp SPACE &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE &kp MINUS &kp M &kp SPACE &kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
             label = "GIT_COMMIT";
         };
+
+        start_dealsuite: start_dealsuite {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(R) &kp C &kp E &kp L &kp E &kp R &kp Y &kp RET &macro_wait_time 1000 &kp N1>
+                     , <&kp LC(LS(N5)) &macro_wait_time 2000 &kp LC(R) &kp R &kp U &kp N &kp SPACE &kp D &kp E &kp V &kp RET>
+                     , <&kp LC(LS(N5)) &macro_wait_time 2000 &kp LC(R) &kp A &kp P &kp P &kp DOT &kp P &kp RET>
+                     , <&kp LC(LS(N5)) &macro_wait_time 2000 &kp LC(R) &kp R &kp U &kp N &kp S &kp E &kp R &kp V &kp RET>
+                     , <&macro_wait_time 2000 &kp LC(LS(T))>
+                     , <&macro_wait_time 2000 &kp LC(LS(T))>
+                     , <&macro_wait_time 2000 &kp LC(LS(T))>;
+            label = "GIT_COMMIT";
+        };
     };
 
     keymap {
@@ -255,7 +268,7 @@
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //|   F5     |  F6      |  F7      |  F8      | g.pull_m |   | g.status |   ◄      |  ▼       |  ►       |  PG_DN   |
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            //|   F9     |  F10     |  F11     |  F12     | PSCRN    |   | g.diff   | g.commit | g.chkout |  g.add   |  g.push  |
+            //|   F9     |  F10     |  F11     |  F12     | dealsuit |   | g.diff   | g.commit | g.chkout |  g.add   |  g.push  |
             //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
             //                      |  WIN     |          |          |   |          |  RSE     |  RALT    |
             //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
@@ -263,7 +276,7 @@
             bindings = <
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &email            &git_pull    &kp HOME     &kp UP         &kp END    &kp PG_UP      &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &git_pull_many    &git_status  &kp LEFT     &kp DOWN       &kp RIGHT  &kp PAGE_DOWN  &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &kp PSCRN         &git_diff    &git_commit  &git_checkout  &git_add   &git_push      &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &start_dealsuite  &git_diff    &git_commit  &git_checkout  &git_add   &git_push      &none
                         &trans   &trans   &trans            &trans       &trans       &trans
             >;
         };
