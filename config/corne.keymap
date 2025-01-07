@@ -217,7 +217,7 @@
                 &kp LC(LS(N5))
                 &kp LC(R)          // Press CTRL + R
                 &macro_wait_time 50
-                &kp N &kp P &kp M &kp SPACE &kp R &kp U &kp N &kp SPACE &kp D  // Type 'npm run d'
+                &kp R &kp U &kp N &kp SPACE &kp D  // Type 'run d'
                 &kp RET            // Press Enter
 
                 // New Terminal tab
