@@ -204,24 +204,13 @@
         start_dealsuite: start_dealsuite {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(R) &kp C &kp E &kp L &kp E &kp R &kp Y &kp RET>
-                     , <&macro_wait_time 1500>
-                     , <&kp N1>
-                     , <&kp LC(LS(N5))>
-                     , <&macro_wait_time 2000>
-                     , <&kp LC(R)>
-                     , <&macro_wait_time 50>
-                     , <&kp R &kp U &kp N &kp SPACE &kp D &kp E &kp V &kp RET>
-                     , <&kp LC(LS(N5))>
-                     , <&macro_wait_time 2000>
-                     , <&kp LC(R)>
-                     , <&macro_wait_time 50>
-                     , <&kp A &kp P &kp P &kp DOT &kp P &kp RET>
-                     , <&kp LC(LS(N5))>
-                     , <macro_wait_time 2000>
-                     , <&kp LC(R)>
-                     , <&macro_wait_time 50>
-                     , <&kp R &kp U &kp N &kp S &kp E &kp R &kp V &kp RET>;
+            bindings = <&kp LC(R) &kp C &kp E &kp L &kp E &kp R &kp Y &kp RET &kp N1>
+                     , <&kp LC(LS(N5)) &none &kp BACKSPACE &kp BACKSPACE &kp BACKSPACE &none>
+                     , <&kp LC(R) &kp R &kp U &kp N &kp SPACE &kp D &kp E &kp V &kp RET>
+                     , <&kp LC(LS(N5)) &none &kp BACKSPACE &kp BACKSPACE &kp BACKSPACE &none>
+                     , <&kp LC(R) &kp A &kp P &kp P &kp DOT &kp P &kp RET>
+                     , <&kp LC(LS(N5)) &none &kp BACKSPACE &kp BACKSPACE &kp BACKSPACE &none>
+                     , <&kp LC(R) &kp R &kp U &kp N &kp S &kp E &kp R &kp V &kp RET>;
             label = "START_DEALSUITE";
         };
     };
