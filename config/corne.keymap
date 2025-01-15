@@ -213,7 +213,7 @@
                 &kp RET            // Press Enter
 
                 // New Terminal tab
-                &macro_wait_time 1500
+                &macro_wait_time 2000
                 &kp LC(LS(N5))
                 &kp LC(R)          // Press CTRL + R
                 &macro_wait_time 50
@@ -221,7 +221,7 @@
                 &kp RET            // Press Enter
 
                 // New Terminal tab
-                &macro_wait_time 1500
+                &macro_wait_time 2000
                 &kp LC(LS(N5))
                 &kp LC(R)          // Press CTRL + R
                 &macro_wait_time 50
@@ -229,7 +229,7 @@
                 &kp RET            // Press Enter
 
                 // New Terminal tab
-                &macro_wait_time 1500
+                &macro_wait_time 2000
                 &kp LC(LS(N5))
                 &kp LC(R)          // Press CTRL + R
                 &macro_wait_time 50
