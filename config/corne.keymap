@@ -159,7 +159,12 @@
         git_pull_many: git_pull_many {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(R) &kp G &kp I &kp T &kp SPACE &kp MINUS &kp LS(C) &kp SPACE &kp LBRC &kp RBRC &kp SPACE &kp P &kp U &kp L &kp L &kp SQT>;
+            bindings = <
+                &kp LC(R) &kp G &kp I &kp T &kp SPACE
+                &kp MINUS &kp LEFT_SHIFT &kp C
+                &kp SPACE &kp LBRC &kp RBRC &kp SPACE
+                &kp P &kp U &kp L &kp L &kp SQT
+            >;
             label = "GIT_PULL_MANY";
         };
 
@@ -357,10 +362,10 @@
                //                      | L.Click  | R.Click  | M.Click  │   │ L.Click  | R.Click  | M.Click  |
                //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             bindings = <
-&none  &none  &mkp LCLK        &mmv MOVE_UP    &mkp RCLK         &mwh SCROLL_UP    &none      &none     &none            &none             &none             &none
-&none  &none  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mwh SCROLL_DOWN  &none      &none     &none            &mwh SCROLL_UP    &none             &none
-&none  &none  &mwh SCROLL_LEFT &none           &mwh SCROLL_RIGHT &none             &mkp MB4   &mkp MB5  &mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_RIGHT &none
-                               &mkp LCLK       &mkp RCLK         &mkp MCLK         &mkp LCLK  &mkp RCLK &mkp MCLK
+&none  &none  &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &msc SCRL_UP      &none      &none     &none          &none           &none           &none
+&none  &none  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN    &none      &none     &none          &msc SCRL_UP    &none           &none
+&none  &none  &none          &none          &none           &none             &mkp MB4   &mkp MB5  &msc SCRL_LEFT &msc SCRL_DOWN  &msc SCRL_RIGHT &none
+                             &mkp LCLK      &mkp RCLK       &mkp MCLK         &mkp LCLK  &mkp RCLK &mkp MCLK
             >;
         };
     };
