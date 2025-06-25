@@ -8,25 +8,22 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
+#include <dt-bindings/zmk/pointing.h>
+
 #define BASE  0
 #define NUM   1
 #define FUNC  2
 #define EXT   3
 #define GAME  4
-
-//#define MOUSE 5
+#define MOUSE 5
 
 &soft_off {
     hold-time-ms = <2000>; // Only turn off it the key is held for 2 seconds or longer.
 };
 
-//&mmv {
-//    time-to-max-speed-ms = <500>;
-//};
-//
-//&mwh {
-//    acceleration-exponent=<1>;
-//};
 
 / {
     behaviors {
@@ -238,7 +235,6 @@
             >;
             label = "START_DEALSUITE";
         };
-
     };
 
     keymap {
@@ -254,14 +250,14 @@
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //│     Z [undo]  X   [cut]   C  [copy] V  [paste]  B    │   │   N      │    M     │   ,<     │  .>    [ \ ]  /?    │
             //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-            //                      │  WIN     │  LWR/↹  │  SPACE   │   │  ENTER   │  RSE/↹   │  ALT/⌫  │
+            //                      │  WIN     │  LWR/↹  │  SPACE   │   │  🖯/⏎    │  RSE/↹  │  ALT/⌫  │
             //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
 
             bindings = <
 &none  &kp Q             &kp W           &kp E        &kp R             &kp T        &kp Y    &kp U              &kp I                    &kp O            &kp P          &none
 &none  &kp A             &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H    &hm RIGHT_SHIFT J  &hm RCTRL K              &hm RIGHT_ALT L  &lt NUM SQT    &none
 &none  &hm LEFT_SHIFT Z  &kp X           &kp C        &kp V             &kp B        &kp N    &kp M              &kp COMMA                &kp DOT          &hm SEMI FSLH  &none
-                                         &kp LGUI     &lt NUM TAB       &kp SPACE    &kp RET  &lt 2 TAB          &hm RIGHT_ALT BACKSPACE
+                                         &kp LGUI     &lt NUM TAB       &kp SPACE    &lt 5 RET &lt 2 TAB        &hm RIGHT_ALT BACKSPACE
             >;
         };
 
@@ -349,24 +345,24 @@
             >;
         };
 
-        //        mouse_layer {
-        //            label = "MOUSE";
-        //        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //        //|          | L.Click  |  ▲       | R.Click  |  S ▲     |   |          |          |          |          |          |
-        //        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //        //|          |  ◄       |  ▼       |  ►       |  S ▼     |   |          |          |          |  S ▲     |          |
-        //        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //        //|          |  S ◄     |          |  S ►     |          |   |  M.4     |  M.5     |  S ◄     |  S ▼     |  S ►     |
-        //        //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
-        //        //                      | L.Click  | R.Click  | M.Click  │   │ L.Click  | R.Click  | M.Click  |
-        //        //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
-        //            bindings = <
-        //&none  &none  &mkp LCLK        &mmv MOVE_UP    &mkp RCLK         &mwh SCROLL_UP    &none      &none     &none            &none             &none             &none
-        //&none  &none  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mwh SCROLL_DOWN  &none      &none     &none            &mwh SCROLL_UP    &none             &none
-        //&none  &none  &mwh SCROLL_LEFT &none           &mwh SCROLL_RIGHT &none             &mkp MB4   &mkp MB5  &mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_RIGHT &none
-        //                               &mkp LCLK       &mkp RCLK         &mkp MCLK         &mkp LCLK  &mkp RCLK &mkp MCLK
-        //            >;
-        //        };
+        mouse_layer {
+            label = "MOUSE";
+               //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+               //|          | L.Click  |  ▲       | R.Click  |  S ▲     |   |          |          |          |          |          |
+               //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+               //|          |  ◄       |  ▼       |  ►       |  S ▼     |   |          |          |          |  S ▲     |          |
+               //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+               //|          |  S ◄     |          |  S ►     |          |   |   back   | forward  |  S ◄     |  S ▼     |  S ►     |
+               //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┴──────────╯
+               //                      | L.Click  | R.Click  | M.Click  │   │ L.Click  | R.Click  | M.Click  |
+               //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
+            bindings = <
+&none  &none  &mkp LCLK        &mmv MOVE_UP    &mkp RCLK         &mwh SCROLL_UP    &none      &none     &none            &none             &none             &none
+&none  &none  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mwh SCROLL_DOWN  &none      &none     &none            &mwh SCROLL_UP    &none             &none
+&none  &none  &mwh SCROLL_LEFT &none           &mwh SCROLL_RIGHT &none             &mkp MB4   &mkp MB5  &mwh SCROLL_LEFT &mwh SCROLL_DOWN  &mwh SCROLL_RIGHT &none
+                               &mkp LCLK       &mkp RCLK         &mkp MCLK         &mkp LCLK  &mkp RCLK &mkp MCLK
+            >;
+        };
     };
 
     conditional_layers {
