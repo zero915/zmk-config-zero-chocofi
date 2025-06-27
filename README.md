@@ -19,3 +19,5 @@ This is the firmware source for the **Chocofi** keyboard, a low-profile split er
 
 - [ZMK CLI](https://zmk.dev/docs/keymaps)
 
+![Screenshot](zero-chocofi.jpg)
+
