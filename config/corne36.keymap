@@ -208,35 +208,27 @@
         start_dealsuite: start_dealsuite {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                // CTRL+R, 'cele', Return, press 1, Return
-                &kp LC(R)
-                &macro_wait_time 50
-                &kp C &kp E &kp L &kp E 
-                &macro_wait_time 1000 
-                &kp RET &kp N1 &kp RET
-
-                // New Tab, CTRL+R, 'run d', Return
-                &macro_wait_time 2000
-                &kp LC(LS(N5))
-                &kp LC(R)
-                &macro_wait_time 50
-                &kp R &kp U &kp N &kp SPACE &kp D &kp RET
-
-                // New Tab, CTRL+R, type 'app.p', Return
-                &macro_wait_time 2000
-                &kp LC(LS(N5))
-                &kp LC(R)
-                &macro_wait_time 50
-                &kp A &kp P &kp P &kp DOT &kp P &kp RET
-
-                // New Tab, CTRL+R, 'runse', Return
-                &macro_wait_time 2000
-                &kp LC(LS(N5))
-                &kp LC(R)
-                &macro_wait_time 50
-                &kp R &kp U &kp N &kp S &kp E &kp RET
-            >;
+            bindings =
+                <&kp LC(R)>,
+                <&macro_wait_time 50>,
+                <&kp C &kp E &kp L &kp E &kp RET>,
+                <&macro_wait_time 2000>,
+                <&kp LC(LS(N5)) &kp LC(R)>,
+                <&macro_wait_time 50>,
+                <&kp R &kp U &kp N &kp SPACE &kp RET>,
+                <&macro_wait_time 2000>,
+                <&kp LC(LS(N5)) &kp LC(R)>,
+                <&macro_wait_time 50>,
+                <&kp A &kp P &kp P &kp DOT &kp RET>,
+                <&macro_wait_time 2000>,
+                <&kp LC(LS(N5)) &kp LC(R)>,
+                <&macro_wait_time 50>,
+                <&kp R &kp U &kp N &kp S &kp RET>,
+                <&macro_wait_time 2000>,
+                <&kp LC(LS(N1)) &kp LC(R)>,
+                <&macro_wait_time 50>
+                //,<&kp N &kp G &kp RET>
+                ;
         };
     };
 

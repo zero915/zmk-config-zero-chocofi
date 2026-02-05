@@ -239,19 +239,20 @@
         base_layer {
             label = "BASE";
             //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            //│  🖯/Q  [esc]  W     │     E    │    R [reload]  T    │   │   Y    [ - ]  U   [ _ ]  I     │   O    [ ⌫ ]  P    │
+            //│    Q   [esc]  W     │     E    │    R [reload]  T    │   │   Y    [ - ]  U   [ _ ]  I     │   O    [ ⌫ ]  P    │
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //│    A   [all]  S   [save]  D    │    F   [ ↵ ]   G    │   │   H   [space]  J    │    K     │   L    [ ↵ ]  '"    │
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //│    Z   [ ⭮ ]  X  [ ✂ ]   C  [copy] V  [paste]  B    │   │   N      │    M     │   ,<     │  .>    [ \ ]  /?    │
             //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-            //                      │    ⊞    │  🔽/↹   │  SPACE   │   │   🖯/⏎   │  🔼/⌫  │
+            //                      │    ⊞     │  🔽/↹  │  SPACE   │   │   🖯/⏎   │  🔼/⌫  │
             //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────╯
+
             bindings = <
-&none  &lt 5 Q      &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P         &none  
-&none  &kp A        &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H      &hm RSHFT J  &hm RCTRL K  &hm RALT L  &lt 1 SQT     &none  
-&none  &hm LSHFT Z  &kp X       &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &hm SEMI FSLH &none  
-                                &kp LGUI     &lt 1 TAB    &kp SPACE    &lt 5 RET  &lt 2 BSPC   &none
+&none  &kp Q       &kp W      &kp E       &kp R       &kp T         &kp Y     &kp U       &kp I       &kp O      &kp P         &none
+&none  &kp A       &hm LALT S &hm LCTRL D &hm LSHFT F &kp G         &kp H     &hm RSHFT J &hm RCTRL K &hm RALT L &lt 1 SQT     &none
+&none  &hm LSHFT Z &kp X      &kp C       &kp V       &kp B         &kp N     &kp M       &kp COMMA   &kp DOT    &hm SEMI FSLH &none
+                              &kp LGUI    &lt 1 TAB   &kp SPACE     &lt 5 RET &lt 2 BSPC   &none 
             >;
         };
 
@@ -263,15 +264,15 @@
             //|  #       |  $       |  (       |  )       |  `       |   |  -       |  4       |  5       |  6       |  &       |
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //|  %       |  ^       |  [       |  ]       |  ~       |   |  =       |  1       |  2       |  3       |  \       |
-            //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+            //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
             //                      |          |    🔴    |          │   │  .       |  0       |
             //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────╯
 
             bindings = <
-&none  &kp EXCL     &kp AT      &kp LBRC  &kp RBRC  &kp PIPE     &kp PLUS   &kp N7  &kp N8  &kp N9  &kp STAR &none  
-&none  &kp HASH     &kp DOLLAR  &kp LPAR  &kp RPAR  &kp GRAVE    &kp MINUS  &kp N4  &kp N5  &kp N6  &kp AMPS &none  
-&none  &kp PERCENT  &kp CARET   &kp LBKT  &kp RBKT  &kp TILDE    &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp BSLH &none  
-                                &trans    &trans    &none        &kp DOT    &kp N0  &none
+&none  &kp EXCL    &kp AT     &kp LBRC  &kp RBRC  &kp PIPE       &kp PLUS   &kp N7   &kp N8  &kp N9  &kp STAR  &none
+&none  &kp HASH    &kp DOLLAR &kp LPAR  &kp RPAR  &kp GRAVE      &kp MINUS  &kp N4   &kp N5  &kp N6  &kp AMPS  &none
+&none  &kp PERCENT &kp CARET  &kp LBKT  &kp RBKT  &kp TILDE      &kp EQUAL  &kp N1   &kp N2  &kp N3  &kp BSLH  &none
+                              &trans    &trans    &trans         &kp DOT    &kp N0   &none
             >;
         };
 
@@ -283,15 +284,15 @@
             //|   F5     |  F6      |  F7      |  F8      | g.pull_m |   | g.status |   ◄      |  ▼       |  ►       |  PG_DN   |
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //|   F9     |  F10     |  F11     |  F12     | dealsuit |   | g.diff   | g.commit | g.chkout |  g.add   |  g.push  |
-            //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+            //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
             //                      |          |          |          |   |          |   🔴     |
             //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────╯
 
             bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &email              &git_pull    &kp HOME     &kp UP         &kp END    &kp PG_UP     &none  
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &git_pull_many      &git_status  &kp LEFT     &kp DOWN       &kp RIGHT  &kp PAGE_DOWN &none  
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &start_dealsuite    &git_diff    &git_commit  &git_checkout  &git_add   &git_push     &none  
-                        &trans   &trans   &trans              &trans       &trans       &none
+&none  &kp F1 &kp F2  &kp F3  &kp F4  &email                &git_pull   &kp HOME    &kp UP        &kp END   &kp PG_UP      &none
+&none  &kp F5 &kp F6  &kp F7  &kp F8  &git_pull_many        &git_status &kp LEFT    &kp DOWN      &kp RIGHT &kp PAGE_DOWN  &none
+&none  &kp F9 &kp F10 &kp F11 &kp F12 &start_dealsuite      &git_diff   &git_commit &git_checkout &git_add  &git_push      &none
+                      &trans  &trans  &trans                &trans      &trans      &none
             >;
         };
 
@@ -303,14 +304,14 @@
             //|          |          |          |    ⚪   |    🔵    |   |   🔅    |    🔆    |  ^ T     |  ^⇧ T    |          |
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //|   ᛒ1     |   ᛒ2     |   ᛒ3     |   ᛒ4     |   ᛒ5     |   |  alt-◄   |  alt-►   |  ^ Tab   |  ^⇧ Tab  |          |
-            //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+            //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
             //                      |          |    🔴   |          |   |          |   ⭕     |
             //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────╯
             bindings = <
-&none  &bt BT_CLR    &trans        &kp C_PREV    &kp C_NEXT    &kp K_PP      &kp C_VOL_DN  &kp C_VOL_UP   &kp C_MUTE       &trans         &kp LC(LA(DEL)) &none
-&none  &trans        &trans        &trans        &to MOUSE     &to GAME      &kp C_BRI_DN  &kp C_BRI_UP   &kp LC(T)        &kp LC(LS(T))  &trans          &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(RS(TAB))  &kp LC(TAB)    &trans          &none
-                                   &trans        &trans        &trans        &trans        &trans         &none
+&none &bt BT_CLR   &trans       &kp C_PREV   &kp C_NEXT   &kp K_PP          &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE      &trans        &kp LC(LA(DEL))  &none
+&none &trans       &trans       &trans       &to MOUSE    &to GAME          &kp C_BRI_DN  &kp C_BRI_UP  &kp LC(T)       &kp LC(LS(T)) &trans           &none
+&none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp LA(LEFT)  &kp LA(RIGHT) &kp LC(RS(TAB)) &kp LC(TAB)   &trans           &none
+                                &trans       &trans       &trans            &trans        &trans        &none
             >;
         };
 
@@ -326,9 +327,9 @@
             //                      |  Grenade |  Jump    | Jump     │   │  ENTER   │  T       |
             //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────╯
             bindings = <
-&none  &kp TAB    &kp Q  &kp W   &hm X E    &hm N4 R     &kp N4   &kp N3  &kp N4  &kp N1  &kp N2   &none
-&none  &kp LSHFT  &kp A  &kp S   &kp D      &hm G F      &kp G    &kp H   &kp X   &none   &none    &none
-&none  &kp LCTRL  &kp Z  &kp F1  &kp C      &hm B V      &kp B    &kp N   &kp M   &none   &to BASE &none
+&none  &kp TAB    &kp Q  &kp W   &hm X E    &hm N4 R     &kp N4   &kp N3  &kp N2  &kp N1  &none     &none
+&none  &kp LSHFT  &kp A  &kp S   &kp D      &hm G F      &kp G    &kp H   &kp X   &none   &none     &none
+&none  &kp LCTRL  &kp Z  &kp F1  &kp C      &hm B V      &kp B    &kp N   &kp M   &none   &to BASE  &none
                          &kp H   &kp SPACE  &kp SPACE    &kp RET  &kp T   &none
             >;
         };
@@ -336,19 +337,19 @@
         mouse_layer {
             label = "MOUSE";
             //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            //|    🔴    |  L.CLK   |  🖯 ▲    |  R.CLK   |  S ▲     |   |  L.CLK   |  R.CLK   |          |          |          |
+            //|          |  L.CLK   |  🖯 ▲    |  R.CLK   |  S ▲     |   |          |          |          |          |          |
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //|          |  🖯 ◄    |  🖯 ▼    |  🖯 ►    |  S ▼     |   |   🖯 5   |          |  S ▲     |          |           |
             //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             //|          |          |          |          |          |   |   🖯 4   |  S ◄     |  S ▼     |  S ►     |    🟢    |
             //╰──────────┴──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-            //                      |  L.CLK   |  R.CLK   |  L.CLK   │   │    🔴    |  M.CLK   |
+            //                      |          |          |  L.CLK   │   │    🔴    |  M.CLK   |
             //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────╯
             bindings = <
-&none  &none  &mkp LCLK      &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP      &mkp LCLK &mkp RCLK       &none           &none            &none    &none
-&none  &none  &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &mkp MB5  &none           &msc SCRL_UP    &none            &none    &none
-&none  &none  &none          &none           &none            &none             &mkp MB4  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &to BASE &none
-                             &mkp LCLK       &mkp RCLK        &mkp LCLK         &none     &mkp MCLK       &none
+&none  &none  &mkp LCLK      &mmv MOVE_UP   &mkp RCLK       &msc SCRL_UP      &none      &none          &none          &none           &none    &none
+&none  &none  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_DOWN    &mkp MB5   &none          &msc SCRL_UP   &none           &none    &none
+&none  &none  &none          &none          &none           &none             &mkp MB4   &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &to BASE &none
+                             &none          &none           &mkp LCLK         &none      &mkp MCLK      &none
             >;
         };
     };
